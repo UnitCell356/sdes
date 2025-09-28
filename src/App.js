@@ -1,7 +1,10 @@
+import React from 'react';
+import SDESDemo from './views/index';
+
 function App() {
   return (
-    <div >
-      主页
+    <div className="App">
+      <SDESDemo />
     </div>
   );
 }
