@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Layout, Row, Col } from 'antd';
-import { SafetyCertificateOutlined } from '@ant-design/icons';
+import { LockOutlined, UnlockOutlined, BulbOutlined, SafetyOutlined } from '@ant-design/icons';
 import EncryptionCard from './components/EncryptionCard';
 import DecryptionCard from './components/DecryptionCard';
 import BruteForceCard from './components/BruteForceCard';
@@ -12,9 +12,9 @@ import './index.css';
 const { Header, Content } = Layout;
 
 const SDESView = () => {
-  const [encryptResult, setEncryptResult] = useState('');
-  const [decryptResult, setDecryptResult] = useState('');
-  const [bruteForceResult, setBruteForceResult] = useState({
+  const [encryptResult, setEncryptResult] = React.useState('');
+  const [decryptResult, setDecryptResult] = React.useState('');
+  const [bruteForceResult, setBruteForceResult] = React.useState({
     keys: [],
     time: 0,
     progress: 0,
@@ -25,7 +25,7 @@ const SDESView = () => {
     <Layout className="sdes-layout">
       <Header className="sdes-header">
         <div className="header-content">
-          <SafetyCertificateOutlined className="header-icon" />
+          <SafetyOutlined className="header-icon" />
           <h1 className="header-title">你为什么不来试试S-DES算法的加密解密呢( ´･ω)</h1>
         </div>
       </Header>

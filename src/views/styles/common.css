@@ -6,6 +6,7 @@
 }
 
 .card-title {
+  color: #52c41a;
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -25,4 +26,60 @@
 
 .result-tag {
   margin-top: 4px;
+}
+
+/* 进度条样式 */
+.ant-progress-line {
+  .ant-progress-bg {
+    background-color: #52c41a;
+  }
+}
+
+/* 按钮悬停效果 */
+.ant-btn-primary {
+  background: #52c41a;
+  border-color: #52c41a;
+
+  &:hover,
+  &:focus {
+    background: #389e0d;
+    border-color: #389e0d;
+  }
+
+  &:active {
+    background: #237804;
+    border-color: #237804;
+  }
+}
+
+/* 绿色主题额外样式 */
+.ant-alert-success {
+  border: 1px solid #b7eb8f;
+  background-color: #f6ffed;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.ant-card-head-title {
+  color: #52c41a;
+}
+
+.ant-tag {
+  &.ant-tag-success {
+    background: #f6ffed;
+    border-color: #b7eb8f;
+    color: #52c41a;
+  }
+}
+
+.ant-radio-button-wrapper-checked {
+  background: #52c41a;
+  border-color: #52c41a;
+  color: white;
+
+  &:hover {
+    color: white;
+  }
 }

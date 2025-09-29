@@ -4,7 +4,7 @@
 }
 
 .sdes-header {
-  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  background: linear-gradient(135deg, #52c41a 0%, #389e0d 100%);
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -31,4 +31,16 @@
 
 .sdes-content {
   padding: 24px 0;
+}
+
+/* 卡片标题图标颜色 */
+.card-title-icon {
+  color: #52c41a;
+}
+
+/* 结果标签样式 */
+.result-tag {
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+  color: #52c41a;
 }
