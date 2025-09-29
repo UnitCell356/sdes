@@ -1,0 +1,34 @@
+/* 主页面特定样式 */
+.sdes-layout {
+  min-height: 100vh;
+}
+
+.sdes-header {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 24px;
+  color: white;
+  margin-right: 12px;
+}
+
+.header-title {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sdes-content {
+  padding: 24px 0;
+}

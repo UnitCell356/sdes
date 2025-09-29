@@ -1,0 +1,16 @@
+/* 布局相关样式 */
+.row-gutter {
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.col-gutter {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+@media (max-width: 576px) {
+  .sdes-content {
+    padding: 16px 0;
+  }
+}

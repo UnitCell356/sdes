@@ -1,0 +1,28 @@
+/* 公共样式类 */
+.card-base {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  height: 100%;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.card-title-icon {
+  margin-right: 8px;
+}
+
+.result-container {
+  margin-top: 16px;
+}
+
+.progress-container {
+  margin: 16px 0;
+}
+
+.result-tag {
+  margin-top: 4px;
+}

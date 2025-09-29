@@ -1,12 +1,9 @@
 import React from 'react';
-import SDESDemo from './views/index';
+import SDESView from './views/index.js';
+import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <SDESDemo />
-    </div>
-  );
+  return <SDESView />;
 }
 
 export default App;

@@ -1,34 +1,67 @@
+import React, { useState } from 'react';
+import { Layout, Row, Col } from 'antd';
+import { SafetyCertificateOutlined } from '@ant-design/icons';
+import EncryptionCard from './components/EncryptionCard';
+import DecryptionCard from './components/DecryptionCard';
+import BruteForceCard from './components/BruteForceCard';
+import AlgorithmInfoCard from './components/AlgorithmInfoCard';
+import './styles/common.css';
+import './styles/layout.css';
+import './index.css';
 
-import React from 'react';
-import EncryptionForm from '../components/EncryptionForm';
-import DecryptionForm from '../components/DecryptionForm';
-import BruteForceForm from '../components/BruteForceForm';
+const { Header, Content } = Layout;
 
-const SDESDemo = () => {
+const SDESView = () => {
+  const [encryptResult, setEncryptResult] = useState('');
+  const [decryptResult, setDecryptResult] = useState('');
+  const [bruteForceResult, setBruteForceResult] = useState({
+    keys: [],
+    time: 0,
+    progress: 0,
+    running: false
+  });
+
   return (
-    <div className="container mt-4">
-      <div className="row">
-        <div className="col-md-8 offset-md-2">
-          <div className="text-center mb-4">
-            <h1>S-DES 算法演示</h1>
-            <p className="lead">简化数据加密标准算法实现</p>
-          </div>
-
-          <EncryptionForm />
-          <DecryptionForm />
-          <BruteForceForm />
-
-          <div className="mt-4 text-center">
-            <h4>算法说明</h4>
-            <p className="text-muted">
-              S-DES (Simplified Data Encryption Standard) 是一个教学用简化版DES算法，<br />
-              使用8位分组和10位密钥，包含初始置换、轮函数、S盒替换和最终置换等步骤。
-            </p>
-          </div>
+    <Layout className="sdes-layout">
+      <Header className="sdes-header">
+        <div className="header-content">
+          <SafetyCertificateOutlined className="header-icon" />
+          <h1 className="header-title">你为什么不来试试S-DES算法的加密解密呢( ´･ω)</h1>
         </div>
-      </div>
-    </div>
+      </Header>
+
+      <Content className="sdes-content">
+        <div className="container">
+          <Row gutter={[24, 24]}>
+            <Col xs={24} lg={12}>
+              <EncryptionCard
+                onEncryptResult={setEncryptResult}
+                encryptResult={encryptResult}
+              />
+            </Col>
+
+            <Col xs={24} lg={12}>
+              <DecryptionCard
+                onDecryptResult={setDecryptResult}
+                decryptResult={decryptResult}
+              />
+            </Col>
+
+            <Col xs={24}>
+              <BruteForceCard
+                onBruteForceResult={setBruteForceResult}
+                bruteForceResult={bruteForceResult}
+              />
+            </Col>
+
+            <Col xs={24}>
+              <AlgorithmInfoCard />
+            </Col>
+          </Row>
+        </div>
+      </Content>
+    </Layout>
   );
 };
 
-export default SDESDemo;
+export default SDESView;
